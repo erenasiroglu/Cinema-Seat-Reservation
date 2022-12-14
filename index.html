@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Ticket Rezervation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen"></div>
+      <div class="row">
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+    <div class="movie-list">
+      <select id="movie">
+        <option disabled>Select Movie</option>
+        <option value="5">Spider-Man No Way Home</option>
+        <option value="10">Black Panther-Wakanda</option>
+        <option value="5">Thor:Love and Thunder</option>
+      </select>
+    </div>
+    <ul class="info">
+      <li>
+        <div class="seat selected"></div>
+        <span>Selected</span>
+      </li>
+      <li>
+        <div class="seat"></div>
+        <span>Empty</span>
+      </li>
+      <li>
+        <div class="seat reserved"></div>
+        <span>Rezerved</span>
+      </li>
+    </ul>
+    <p class="text">
+      <span id="count"></span> Adet koltuk için hesaplanan ücret: <span id="amount"></span>
+        </span
+      >
+    </p>
+    <script src="script.js"></script>
+  </body>
+</html>
