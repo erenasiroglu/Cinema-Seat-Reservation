@@ -72,22 +72,24 @@
     <ul class="info">
       <li>
         <div class="seat selected"></div>
-        <span>Selected</span>
+        <span class="seat-name">Selected</span>
       </li>
       <li>
         <div class="seat"></div>
-        <span>Empty</span>
+        <span class="seat-name">Empty</span>
       </li>
       <li>
         <div class="seat reserved"></div>
-        <span>Rezerved</span>
+        <span class="seat-name">Rezerved</span>
       </li>
     </ul>
     <p class="text">
-      <span id="count"></span> Adet koltuk için hesaplanan ücret: <span id="amount"></span>
+      <span id="count"></span> Price calculated for one seat: <span id="amount"></span>
         </span
       >
     </p>
-    <script src="script.js"></script>
+    <Button id="buy" class="seat-button" onclick=buyTicket()>Buy Ticket</Button>
+    <script src="script.js">
+    </script>
   </body>
 </html>

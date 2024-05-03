@@ -62,3 +62,33 @@ function saveToLocalStorage(indexs) {
   localStorage.setItem("selectedSeats", JSON.stringify(indexs));
   localStorage.setItem("selectedMovieIndex", select.selectedIndex);
 }
+
+function getFromLocalStorage() {
+  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+  if (selectedSeats != null && selectedSeats.length > 0) {
+    seats.forEach(function (seat, index) {
+      if (selectedSeats.indexOf(index) > -1) {
+        seat.classList.add("selected");
+      }
+    });
+  }
+
+  const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
+  if (selectedMovieIndex != null) {
+    select.selectedIndex = selectedMovieIndex;
+  }
+}
+
+function buyTicket() {
+  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+  if (selectedSeats != null && selectedSeats.length > 0) {
+    seats.forEach(function (seat, index) {
+      if (selectedSeats.indexOf(index) > -1) {
+        seat.classList.add("reserved");
+        seat.classList.remove("selected");
+      }
+    });
+  }
+  localStorage.removeItem("selectedSeats");
+  calculateTotal();
+}
